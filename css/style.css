@@ -1,0 +1,376 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 40px;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 85px;
+   /* margin: 3px 6px;*/
+}
+
+
+/* Navigation Bar: List Styling */
+/*#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}*/
+#navbar ul{
+    display: flex;
+   
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+	position: relative;
+}
+
+#navbar  li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 15px;
+    text-decoration: none;
+
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+ 
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../uni.jpg') no-repeat center center/cover;
+    height: 598px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.99;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+	
+}
+.lbl{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+	text-align:center;
+    padding: 10px;
+}
+
+/*slider section*/
+ .slideshow {
+overflow: hidden;
+height: 400px;
+width: 390px;
+margin: 0 auto;
+}
+.slide-wrapper {
+width: 1950px;
+animation: slide 15s infinite;
+}
+.image-container{
+margin-top: 0px;
+margin-bottom: 30px;
+float: left;
+height: 350px;
+width: 390px;
+}
+.image-container:nth-child(1) {
+background-image: url("../images/library.jpg");
+}
+.image-container:nth-child(2) {
+background-image: url("../images/classroom.jpg");
+
+}
+.image-container:nth-child(3) {
+background-image: url("../images/corridoor.jpg");
+}
+.image-container:nth-child(4) {
+background-image: url("../images/campus.jpg");
+}
+.image-container:nth-child(5) {
+background-image: url("../images/teachingroom.jpg");
+}
+@keyframes slide {
+10% {margin-left: 0px;}
+25% {margin-left: -390px;}
+35% {margin-left: -390px;}
+45% {margin-left: -780px;}
+55% {margin-left: -780px;}
+65% {margin-left: -1170px;}
+75% {margin-left: -1170px;}
+85% {margin-left: -1570px;}
+95% {margin-left: -1570px;}
+
+}
+
+ 
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../ghj.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+  
+}
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+
+.center{
+    text-align: center;
+}
+
+
+#footer{
+	color:white;
+	background-color:#02043c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+	padding-top: 34px;
+	opacity:0.8;
+}
+
+@media (max-width: 750px){
+	*{
+		font-size: 0.9rem;
+	}
+	#footer{
+		
+		width:100%;
+	}
+	#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../uni.jpg') no-repeat center center/cover;
+    height: 598px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.99;
+}
+#home h1{
+    color:white;
+    text-align: center;
+
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+   
+    font-family: 'Bree Serif', serif;
+	
+}
+	#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../ghj.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+  
+}
+}
+@media (max-width: 650px){
+	
+	* {
+		font-size: 0.6rem;
+}}
+@media (max-width: 400px){
+	
+	* {
+		font-size: 0.4rem;
+	}
+		
+	#footer{
+	
+		width:100%;
+	}
+	#contact::before{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../ghj.jpg') no-repeat center center/cover width 100%;
+   
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+	
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+	z-index: -1;
+    
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+  
+   font-family: 'Bree Serif', serif;
+  
+}
+	
+}
